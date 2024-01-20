@@ -1,10 +1,20 @@
-using  UserModule.UserService.Business;
+using UserModule.UserService.Business;
+using UserModule.UserService.Business.Commands;
+using UserModule.UserService.Business.Queries;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+
+builder.Services.AddMediatR(cfg =>
+{
+    cfg.RegisterServicesFromAssemblyContaining<GetUserQuery>();
+});
+
+
 builder.Services.AddControllers();
+
 
 builder.Services.AddBusinessServices();
 

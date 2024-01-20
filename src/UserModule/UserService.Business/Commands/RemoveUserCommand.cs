@@ -1,6 +1,8 @@
+using MediatR;
+
 namespace UserModule.UserService.Business.Commands
 {
-    public class RemoveUserCommand
+    public class RemoveUserCommand : IRequest
     {
         public string Id { get; set; }
 

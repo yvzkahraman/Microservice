@@ -1,4 +1,5 @@
 using System.Diagnostics.Metrics;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using UserModule.UserService.Business.Commands;
 using UserModule.UserService.Business.Handlers;
@@ -10,23 +11,18 @@ namespace UserModule.UserService.API.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private readonly CreateUserCommandHandler createUserCommandHandler;
-        private readonly GetUserListQueryHandler getUserListQueryHandler;
-        private readonly UpdateUserCommandHandler updateUserCommandHandler;
-        private readonly RemoveUserCommandHandler removeUserCommandHandler;
 
-        public UsersController(CreateUserCommandHandler createUserCommandHandler, GetUserListQueryHandler getUserListQueryHandler, UpdateUserCommandHandler updateUserCommandHandler, RemoveUserCommandHandler removeUserCommandHandler)
+        private readonly IMediator mediator;
+
+        public UsersController(IMediator mediator)
         {
-            this.createUserCommandHandler = createUserCommandHandler;
-            this.getUserListQueryHandler = getUserListQueryHandler;
-            this.updateUserCommandHandler = updateUserCommandHandler;
-            this.removeUserCommandHandler = removeUserCommandHandler;
+            this.mediator = mediator;
         }
 
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var result = await this.getUserListQueryHandler.Handle(new GetUserListQuery());
+            var result = await this.mediator.Send(new GetUserListQuery());
 
             return Ok(result);
         }
@@ -34,14 +30,14 @@ namespace UserModule.UserService.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(CreateUserCommand command)
         {
-            var result = await this.createUserCommandHandler.Handle(command);
+            var result = await this.mediator.Send(command);
             return Created("", result);
         }
 
         [HttpPut]
         public async Task<IActionResult> Update(UpdateUserCommand command)
         {
-            await this.updateUserCommandHandler.Handle(command);
+            await this.mediator.Send(command);
             return NoContent();
         }
 
@@ -49,8 +45,15 @@ namespace UserModule.UserService.API.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Remove(string id)
         {
-            await this.removeUserCommandHandler.Handle(new RemoveUserCommand(id));
+            await this.mediator.Send(new RemoveUserCommand(id));
             return NoContent();
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(string id)
+        {
+            var result = await this.mediator.Send(new GetUserQuery(id));
+            return Ok(result);
         }
 
 

@@ -1,9 +1,10 @@
+using MediatR;
 using UserModule.UserService.Business.Commands;
 using UserModule.UserService.Data.Interfaces;
 
 namespace UserModule.UserService.Business.Handlers
 {
-    public class UpdateUserCommandHandler
+    public class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand>
     {
         private readonly IUserRepository userRepository;
 
@@ -12,16 +13,16 @@ namespace UserModule.UserService.Business.Handlers
             this.userRepository = userRepository;
         }
 
-
-        public async Task Handle(UpdateUserCommand command)
+        
+        public async Task Handle(UpdateUserCommand request, CancellationToken cancellationToken)
         {
             await this.userRepository.UpdateAsync(new Data.Entities.AppUser
             {
-                Id = command.Id,
-                FirstName = command.FirstName,
-                LastName = command.LastName,
-                Password = command.Password,
-                Username = command.Username,
+                Id = request.Id,
+                FirstName = request.FirstName,
+                LastName = request.LastName,
+                Password = request.Password,
+                Username = request.Username,
             });
         }
     }

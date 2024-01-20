@@ -1,6 +1,9 @@
+
+using MediatR;
+
 namespace UserModule.UserService.Business.Commands
 {
-    public class UpdateUserCommand
+    public class UpdateUserCommand : IRequest
     {
         public string Id { get; set; } = null!;
         public string FirstName { get; set; } = null!;

@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "sZ+7ury/43FC/wfWGEFOm9p3T2A0fb+aMQXmSe2e2nUwCuVhpR5UwPlaNLuOoS4IzQQ1fj+rg+iiUMzm1fQo+A==",
+  "dgSpecHash": "iVzDxGM37bGCcpiwXUHDXjNY5rpTaUdRuzExGT+z3Edf1MoLsMxCVDUGRMZ0l2iXzL8xlQgs/ERE6sv0Tma6+w==",
   "success": true,
   "projectFilePath": "/Users/yavuzselimkahraman/Desktop/FullStackNetCore/Mikroservice/src/UserModule/UserService.API/UserService.API.csproj",
   "expectedPackageFiles": [
     "/Users/yavuzselimkahraman/.nuget/packages/awssdk.core/3.7.100.14/awssdk.core.3.7.100.14.nupkg.sha512",
     "/Users/yavuzselimkahraman/.nuget/packages/awssdk.securitytoken/3.7.100.14/awssdk.securitytoken.3.7.100.14.nupkg.sha512",
     "/Users/yavuzselimkahraman/.nuget/packages/dnsclient/1.6.1/dnsclient.1.6.1.nupkg.sha512",
+    "/Users/yavuzselimkahraman/.nuget/packages/mediatr/12.2.0/mediatr.12.2.0.nupkg.sha512",
+    "/Users/yavuzselimkahraman/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
     "/Users/yavuzselimkahraman/.nuget/packages/microsoft.aspnetcore.openapi/8.0.0/microsoft.aspnetcore.openapi.8.0.0.nupkg.sha512",
     "/Users/yavuzselimkahraman/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "/Users/yavuzselimkahraman/.nuget/packages/microsoft.extensions.dependencyinjection/8.0.0/microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",

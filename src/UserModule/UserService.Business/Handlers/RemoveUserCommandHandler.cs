@@ -1,9 +1,10 @@
+using MediatR;
 using UserModule.UserService.Business.Commands;
 using UserModule.UserService.Data.Interfaces;
 
 namespace UserModule.UserService.Business.Handlers
 {
-    public class RemoveUserCommandHandler
+    public class RemoveUserCommandHandler : IRequestHandler<RemoveUserCommand>
     {
         private readonly IUserRepository userRepository;
 
@@ -12,9 +13,9 @@ namespace UserModule.UserService.Business.Handlers
             this.userRepository = userRepository;
         }
 
-        public async Task Handle(RemoveUserCommand command)
+        public async Task Handle(RemoveUserCommand request, CancellationToken cancellationToken)
         {
-            await this.userRepository.DeleteAsync(command.Id);
+            await this.userRepository.DeleteAsync(request.Id);
         }
     }
 }

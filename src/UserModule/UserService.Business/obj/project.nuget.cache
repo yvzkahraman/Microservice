@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "LzdrsSv9re7LVSACrMcjcm+oIPLXUj6DvRGxV5ZsXdtzfKKpQr9ECiz69JAfaKcdF1JH5pil/bVQMRN9mQf/1A==",
+  "dgSpecHash": "luRO2FSzV+GoZ5ScYPmUtl+2BJFs8ZzuKEFiJQMV3bLDlxt+9WXc0XPRjEcag0oMqR/qZ4IIiJET5ZgX9iJ92g==",
   "success": true,
   "projectFilePath": "/Users/yavuzselimkahraman/Desktop/FullStackNetCore/Mikroservice/src/UserModule/UserService.Business/UserService.Business.csproj",
   "expectedPackageFiles": [
     "/Users/yavuzselimkahraman/.nuget/packages/awssdk.core/3.7.100.14/awssdk.core.3.7.100.14.nupkg.sha512",
     "/Users/yavuzselimkahraman/.nuget/packages/awssdk.securitytoken/3.7.100.14/awssdk.securitytoken.3.7.100.14.nupkg.sha512",
     "/Users/yavuzselimkahraman/.nuget/packages/dnsclient/1.6.1/dnsclient.1.6.1.nupkg.sha512",
+    "/Users/yavuzselimkahraman/.nuget/packages/mediatr/12.2.0/mediatr.12.2.0.nupkg.sha512",
+    "/Users/yavuzselimkahraman/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
     "/Users/yavuzselimkahraman/.nuget/packages/microsoft.extensions.dependencyinjection/8.0.0/microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "/Users/yavuzselimkahraman/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "/Users/yavuzselimkahraman/.nuget/packages/microsoft.extensions.logging.abstractions/2.0.0/microsoft.extensions.logging.abstractions.2.0.0.nupkg.sha512",

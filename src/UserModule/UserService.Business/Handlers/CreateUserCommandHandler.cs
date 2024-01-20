@@ -1,10 +1,11 @@
+using MediatR;
 using UserModule.UserService.Business.Commands;
 using UserModule.UserService.Business.Dtos;
 using UserModule.UserService.Data.Interfaces;
 
 namespace UserModule.UserService.Business.Handlers
 {
-    public class CreateUserCommandHandler
+    public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, UserDto>
     {
         private readonly IUserRepository repository;
 
@@ -13,14 +14,14 @@ namespace UserModule.UserService.Business.Handlers
             this.repository = repository;
         }
 
-        public async Task<UserDto> Handle(CreateUserCommand command)
+        public async Task<UserDto> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
             var appUser = await this.repository.CreateAsync(new Data.Entities.AppUser
             {
-                FirstName = command.FirstName,
-                LastName = command.LastName,
-                Password = command.Password,
-                Username = command.Username,
+                FirstName = request.FirstName,
+                LastName = request.LastName,
+                Password = request.Password,
+                Username = request.Username,
             });
 
             return new UserDto
@@ -30,7 +31,6 @@ namespace UserModule.UserService.Business.Handlers
                 LastName = appUser.LastName,
                 Username = appUser.Username,
             };
-
         }
     }
 
