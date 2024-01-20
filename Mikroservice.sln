@@ -15,6 +15,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserService.Data", "src\Use
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserService.Example", "src\UserModule\UserService.Example\UserService.Example.csproj", "{D12FF3F0-F255-4562-BC15-3B6CB191A1B1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InventoryModule", "InventoryModule", "{A2BB5773-DAD0-4745-AD64-63856F0E580C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryService.API", "src\InventoryModule\InventoryService.API\InventoryService.API.csproj", "{E1E28E21-E355-49A1-8F7E-145EF7029AF4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +41,10 @@ Global
 		{D12FF3F0-F255-4562-BC15-3B6CB191A1B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D12FF3F0-F255-4562-BC15-3B6CB191A1B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D12FF3F0-F255-4562-BC15-3B6CB191A1B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1E28E21-E355-49A1-8F7E-145EF7029AF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1E28E21-E355-49A1-8F7E-145EF7029AF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1E28E21-E355-49A1-8F7E-145EF7029AF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1E28E21-E355-49A1-8F7E-145EF7029AF4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -47,6 +55,8 @@ Global
 		{B370EC70-7107-4296-A6BA-16C08252FCA1} = {F17F622C-B912-4D37-B109-62FB9AA0ABFD}
 		{48C9892F-13B5-4915-B984-6A39F76B7FD5} = {F17F622C-B912-4D37-B109-62FB9AA0ABFD}
 		{D12FF3F0-F255-4562-BC15-3B6CB191A1B1} = {F17F622C-B912-4D37-B109-62FB9AA0ABFD}
+		{A2BB5773-DAD0-4745-AD64-63856F0E580C} = {68CE3CEB-CBB4-44A3-BDF2-C64A805C48E9}
+		{E1E28E21-E355-49A1-8F7E-145EF7029AF4} = {A2BB5773-DAD0-4745-AD64-63856F0E580C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CBCB23A1-8726-4551-A64B-B53C4C89D8F8}
