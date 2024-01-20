@@ -1,0 +1,15 @@
+/Users/yavuzselimkahraman/Desktop/FullStackNetCore/Mikroservice/src/UserModule/UserService.Business/bin/Debug/net8.0/UserService.Business.deps.json
+/Users/yavuzselimkahraman/Desktop/FullStackNetCore/Mikroservice/src/UserModule/UserService.Business/bin/Debug/net8.0/UserService.Business.dll
+/Users/yavuzselimkahraman/Desktop/FullStackNetCore/Mikroservice/src/UserModule/UserService.Business/bin/Debug/net8.0/UserService.Business.pdb
+/Users/yavuzselimkahraman/Desktop/FullStackNetCore/Mikroservice/src/UserModule/UserService.Business/bin/Debug/net8.0/UserService.Data.dll
+/Users/yavuzselimkahraman/Desktop/FullStackNetCore/Mikroservice/src/UserModule/UserService.Business/bin/Debug/net8.0/UserService.Data.pdb
+/Users/yavuzselimkahraman/Desktop/FullStackNetCore/Mikroservice/src/UserModule/UserService.Business/obj/Debug/net8.0/UserService.Business.csproj.AssemblyReference.cache
+/Users/yavuzselimkahraman/Desktop/FullStackNetCore/Mikroservice/src/UserModule/UserService.Business/obj/Debug/net8.0/UserService.Business.GeneratedMSBuildEditorConfig.editorconfig
+/Users/yavuzselimkahraman/Desktop/FullStackNetCore/Mikroservice/src/UserModule/UserService.Business/obj/Debug/net8.0/UserService.Business.AssemblyInfoInputs.cache
+/Users/yavuzselimkahraman/Desktop/FullStackNetCore/Mikroservice/src/UserModule/UserService.Business/obj/Debug/net8.0/UserService.Business.AssemblyInfo.cs
+/Users/yavuzselimkahraman/Desktop/FullStackNetCore/Mikroservice/src/UserModule/UserService.Business/obj/Debug/net8.0/UserService.Business.csproj.CoreCompileInputs.cache
+/Users/yavuzselimkahraman/Desktop/FullStackNetCore/Mikroservice/src/UserModule/UserService.Business/obj/Debug/net8.0/UserService.Business.csproj.CopyComplete
+/Users/yavuzselimkahraman/Desktop/FullStackNetCore/Mikroservice/src/UserModule/UserService.Business/obj/Debug/net8.0/UserService.Business.dll
+/Users/yavuzselimkahraman/Desktop/FullStackNetCore/Mikroservice/src/UserModule/UserService.Business/obj/Debug/net8.0/refint/UserService.Business.dll
+/Users/yavuzselimkahraman/Desktop/FullStackNetCore/Mikroservice/src/UserModule/UserService.Business/obj/Debug/net8.0/UserService.Business.pdb
+/Users/yavuzselimkahraman/Desktop/FullStackNetCore/Mikroservice/src/UserModule/UserService.Business/obj/Debug/net8.0/ref/UserService.Business.dll
