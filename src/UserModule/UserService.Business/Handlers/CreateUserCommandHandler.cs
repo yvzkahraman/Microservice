@@ -1,7 +1,8 @@
-using UserModule.UserService.Buiness.Commands;
+using UserModule.UserService.Business.Commands;
+using UserModule.UserService.Business.Dtos;
 using UserModule.UserService.Data.Interfaces;
 
-namespace UserModule.UserService.Buiness.Handlers
+namespace UserModule.UserService.Business.Handlers
 {
     public class CreateUserCommandHandler
     {
@@ -12,20 +13,23 @@ namespace UserModule.UserService.Buiness.Handlers
             this.repository = repository;
         }
 
-        public async Task Handle(CreateUserCommand command)
+        public async Task<UserDto> Handle(CreateUserCommand command)
         {
-            // business spesifik
-
-
-            // validation 
-            // business rule
-            await this.repository.CreateAsync(new Data.Entities.AppUser
+            var appUser = await this.repository.CreateAsync(new Data.Entities.AppUser
             {
                 FirstName = command.FirstName,
                 LastName = command.LastName,
                 Password = command.Password,
                 Username = command.Username,
             });
+
+            return new UserDto
+            {
+                Id = appUser.Id,
+                FirstName = appUser.FirstName,
+                LastName = appUser.LastName,
+                Username = appUser.Username,
+            };
 
         }
     }

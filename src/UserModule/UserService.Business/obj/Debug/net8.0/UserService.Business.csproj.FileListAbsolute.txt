@@ -13,3 +13,4 @@
 /Users/yavuzselimkahraman/Desktop/FullStackNetCore/Mikroservice/src/UserModule/UserService.Business/obj/Debug/net8.0/refint/UserService.Business.dll
 /Users/yavuzselimkahraman/Desktop/FullStackNetCore/Mikroservice/src/UserModule/UserService.Business/obj/Debug/net8.0/UserService.Business.pdb
 /Users/yavuzselimkahraman/Desktop/FullStackNetCore/Mikroservice/src/UserModule/UserService.Business/obj/Debug/net8.0/ref/UserService.Business.dll
+/Users/yavuzselimkahraman/Desktop/FullStackNetCore/Mikroservice/src/UserModule/UserService.Business/obj/Debug/net8.0/UserService.Business.sourcelink.json

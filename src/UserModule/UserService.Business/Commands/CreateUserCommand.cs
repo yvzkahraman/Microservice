@@ -1,4 +1,4 @@
-namespace UserModule.UserService.Buiness.Commands
+namespace UserModule.UserService.Business.Commands
 {
     public class CreateUserCommand
     {

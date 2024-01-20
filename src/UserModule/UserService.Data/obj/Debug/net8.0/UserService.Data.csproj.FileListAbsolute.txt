@@ -10,3 +10,4 @@
 /Users/yavuzselimkahraman/Desktop/FullStackNetCore/Mikroservice/src/UserModule/UserService.Data/obj/Debug/net8.0/UserService.Data.pdb
 /Users/yavuzselimkahraman/Desktop/FullStackNetCore/Mikroservice/src/UserModule/UserService.Data/obj/Debug/net8.0/ref/UserService.Data.dll
 /Users/yavuzselimkahraman/Desktop/FullStackNetCore/Mikroservice/src/UserModule/UserService.Data/obj/Debug/net8.0/UserService.Data.csproj.AssemblyReference.cache
+/Users/yavuzselimkahraman/Desktop/FullStackNetCore/Mikroservice/src/UserModule/UserService.Data/obj/Debug/net8.0/UserService.Data.sourcelink.json
