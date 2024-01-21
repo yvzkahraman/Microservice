@@ -1,3 +1,4 @@
+using MarketModule.MarketService.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -10,6 +11,8 @@ namespace MarketModule.MarketService.Data
             services.AddDbContext<MarketDbContext>(opt=>{
                 opt.UseSqlServer("server=.; database=MicroserviceMarketDb; user id =sa; password=135135YK!; TrustServerCertificate=true;");
             });
+
+            services.AddScoped<MarketRepository>();
         }
     }
 }
