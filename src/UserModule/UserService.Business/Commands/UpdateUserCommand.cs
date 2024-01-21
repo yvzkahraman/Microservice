@@ -1,6 +1,7 @@
 
 using MediatR;
 
+
 namespace UserModule.UserService.Business.Commands
 {
     public class UpdateUserCommand : IRequest
