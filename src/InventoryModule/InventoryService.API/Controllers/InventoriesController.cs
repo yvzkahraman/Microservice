@@ -5,13 +5,17 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace InventoryModule.InventoryService.API.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class InventoriesController : ControllerBase
     {
         private readonly InventoryRepository inventoryRepository;
+        private readonly ItemInventoryRepository itemInventoryRepository;
 
-        public InventoriesController(InventoryRepository inventoryRepository)
+        public InventoriesController(InventoryRepository inventoryRepository, ItemInventoryRepository itemInventoryRepository)
         {
             this.inventoryRepository = inventoryRepository;
+            this.itemInventoryRepository = itemInventoryRepository;
         }
 
         [HttpGet]
@@ -52,6 +56,36 @@ namespace InventoryModule.InventoryService.API.Controllers
             });
 
             return NoContent();
+        }
+
+        [HttpPost("AddItemToInventory")]
+        public async Task<IActionResult> AddItemToInventory(AddItemToInventoryDto dto)
+        {
+            var result = await this.itemInventoryRepository.AddItemToInventory(new Data.Entities.ItemInventory
+            {
+                InventoryId = dto.InventoryId,
+                ItemId = dto.ItemId
+            });
+            return Created("", result);
+        }
+
+        [HttpPost("RemoveItemFromInventory")]
+        public async Task<IActionResult> RemoveItemFromInventory(AddItemToInventoryDto dto)
+        {
+            await this.itemInventoryRepository.RemoveItemFromInventory(new Data.Entities.ItemInventory
+            {
+                InventoryId = dto.InventoryId,
+                ItemId = dto.ItemId
+            });
+
+            return NoContent();
+        }
+
+        [HttpGet("GetItemsFromInventory/{inventoryId}")]
+        public async Task<IActionResult> GetItemsFromInventory(string inventoryId)
+        {
+            var result = await this.itemInventoryRepository.GetItems(inventoryId);
+            return Ok(result);
         }
 
 
