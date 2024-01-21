@@ -45,3 +45,7 @@ app.MapControllers();
 
 
 app.Run();
+
+//Ödevler, 
+// 1- Ocelot'u ekle,
+// 2- Marketten item satıldığında, itemın fiyatı kadar, user'a para geçsin, ve bu iş asenkron gerçekleşsin.
