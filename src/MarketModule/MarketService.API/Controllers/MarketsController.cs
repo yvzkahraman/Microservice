@@ -2,7 +2,9 @@ using System.Text;
 using System.Text.Json;
 using MarketModule.MarketService.API.Dtos;
 using MarketModule.MarketService.Data.Repositories;
+using MassTransit;
 using Microsoft.AspNetCore.Mvc;
+using SharedModule.Shared.Interfaces;
 
 namespace MarketModule.MarketService.API.Controllers
 {
@@ -13,10 +15,13 @@ namespace MarketModule.MarketService.API.Controllers
         private readonly MarketRepository marketRepository;
         private readonly IHttpClientFactory httpClientFactory;
 
-        public MarketsController(MarketRepository marketRepository, IHttpClientFactory httpClientFactory)
+        private readonly IPublishEndpoint publishEndpoint;
+
+        public MarketsController(MarketRepository marketRepository, IHttpClientFactory httpClientFactory, IPublishEndpoint publishEndpoint)
         {
             this.marketRepository = marketRepository;
             this.httpClientFactory = httpClientFactory;
+            this.publishEndpoint = publishEndpoint;
         }
 
         [HttpGet]
@@ -32,34 +37,44 @@ namespace MarketModule.MarketService.API.Controllers
         {
 
 
-            var postData = new { dto.InventoryId, dto.ItemId };
+            // var postData = new { dto.InventoryId, dto.ItemId };
 
-            var jsonData = JsonSerializer.Serialize(postData, new JsonSerializerOptions
+            // var jsonData = JsonSerializer.Serialize(postData, new JsonSerializerOptions
+            // {
+            //     PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+            //     WriteIndented = true
+            // });
+
+            // var stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
+
+            // var client = this.httpClientFactory.CreateClient();
+            // var response = await client.PostAsync("http://localhost:5010/api/Inventories/RemoveItemFromInventory", stringContent);
+
+            //  if (response.IsSuccessStatusCode)
+            // {
+            //       }
+
+            // return BadRequest("Ürün envanterden düşmediği için, markete eklenemedi");
+
+            await this.publishEndpoint.Publish<MarketCreated>(new
             {
-                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-                WriteIndented = true
+
+                dto.InventoryId,
+                dto.ItemId
             });
 
-            var stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-
-            var client = this.httpClientFactory.CreateClient();
-            var response = await client.PostAsync("http://localhost:5010/api/Inventories/RemoveItemFromInventory", stringContent);
 
 
-            if (response.IsSuccessStatusCode)
+            var result = await marketRepository.Create(new Data.Entities.Market
             {
-                var result = await marketRepository.Create(new Data.Entities.Market
-                {
-                    ItemId = dto.ItemId,
-                    Price = dto.Price,
-                    SellerId = dto.SellerId
-                });
+                ItemId = dto.ItemId,
+                Price = dto.Price,
+                SellerId = dto.SellerId
+            });
 
-                return Created("", result);
+            return Created("", result);
 
-            }
 
-            return BadRequest("Ürün envanterden düşmediği için, markete eklenemedi");
 
 
 

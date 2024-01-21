@@ -1,8 +1,17 @@
 using MarketModule.MarketService.Data;
+using MassTransit;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddMassTransit(x =>
+{
+    x.UsingRabbitMq();
+});
+
+// builder.Services.AddMassTransitHostedService();
+
 builder.Services.AddDataServices();
 builder.Services.AddHttpClient();
 

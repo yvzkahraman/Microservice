@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketService.API", "src\Ma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketService.Data", "src\MarketModule\MarketService.Data\MarketService.Data.csproj", "{338E67E5-F7CA-47BD-83DE-F2C5323A9793}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedModule", "SharedModule", "{D7D78129-7989-4439-A219-55689C15A192}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "src\SharedModule\Shared\Shared.csproj", "{6811A16C-4283-44A7-A049-5C9D4C68B138}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,6 +69,10 @@ Global
 		{338E67E5-F7CA-47BD-83DE-F2C5323A9793}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{338E67E5-F7CA-47BD-83DE-F2C5323A9793}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{338E67E5-F7CA-47BD-83DE-F2C5323A9793}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6811A16C-4283-44A7-A049-5C9D4C68B138}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6811A16C-4283-44A7-A049-5C9D4C68B138}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6811A16C-4283-44A7-A049-5C9D4C68B138}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6811A16C-4283-44A7-A049-5C9D4C68B138}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,6 +89,8 @@ Global
 		{83CE6FF5-8D91-4F16-A08A-E9E1A68DCA4E} = {68CE3CEB-CBB4-44A3-BDF2-C64A805C48E9}
 		{E9E2D601-0F0E-458B-A79E-6FF0F609A416} = {83CE6FF5-8D91-4F16-A08A-E9E1A68DCA4E}
 		{338E67E5-F7CA-47BD-83DE-F2C5323A9793} = {83CE6FF5-8D91-4F16-A08A-E9E1A68DCA4E}
+		{D7D78129-7989-4439-A219-55689C15A192} = {68CE3CEB-CBB4-44A3-BDF2-C64A805C48E9}
+		{6811A16C-4283-44A7-A049-5C9D4C68B138} = {D7D78129-7989-4439-A219-55689C15A192}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CBCB23A1-8726-4551-A64B-B53C4C89D8F8}
